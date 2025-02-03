@@ -460,7 +460,7 @@
                   WEB DEVELOPMENT
                 </h3>
                 <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                  I create scalable and efficient web applications using PHP, Laravel, MySQL, and modern JavaScript frameworks.
+                  I create scalable and efficient web applications using PHP, Laravel, MySQL and modern JavaScript frameworks.
                 </p>
               </div>
             </div>
@@ -484,7 +484,7 @@
                 </h3>
                 <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
                   I build robust, scalable APIs for integration with third-party services and other applications,
-                  ensuring seamless communication and data exchange with technologies like RESTful APIs and GraphQL
+                  ensuring seamless communication and data exchange with technology like RESTful APIs
                 </p>
               </div>
             </div>
