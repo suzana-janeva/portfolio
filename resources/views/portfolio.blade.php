@@ -66,6 +66,13 @@
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_ANALYTICS') }}"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ env("GOOGLE_ANALYTICS") }}');
+  </script>
 
 </head>
 
@@ -115,6 +122,16 @@
 
                 <span
                   class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              </li>
+
+              <li class="group pl-6">
+
+              <span
+                @click="triggerNavItem('#portfolio')"
+                class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+
+              <span
+                class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
               </li>
 
               <li class="group pl-6">
@@ -199,6 +216,14 @@
             <li class="py-2">
 
               <span
+                @click="triggerMobileNavItem('#portfolio')"
+                class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+
+              </li>
+
+            <li class="py-2">
+
+              <span
                 @click="triggerMobileNavItem('#community')"
                 class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">My Community</span>
 
@@ -274,16 +299,15 @@
                     <a href="https://github.com/suzana-janeva" class="pl-4">
                       <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="https://www.facebook.com/suzana.janeva92" class="pl-4">
+                    <a href="https://gitlab.com/suzanaristova" class="pl-4">
                       <i
-                        class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
+                        class="bx bxl-gitlab text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="https://www.instagram.com/janeva.suzana/" class="pl-4">
-                      <i
-                        class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+                    <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+                      <i class="bx bxs-envelope text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="live:suzanaristova" class="pl-4">
-                        <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
+                    <a href="skype:live:suzanaristova?call" class="pl-4">
+                      <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
                     </a>
                   </div>
                 </div>
@@ -329,16 +353,15 @@
                   <a href="https://github.com/suzana-janeva" class="pl-4">
                     <i class="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="https://www.facebook.com/suzana.janeva92" class="pl-4">
+                  <a href="https://gitlab.com/suzanaristova" class="pl-4">
                     <i
-                      class="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
+                      class="bx bxl-gitlab text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="https://www.instagram.com/janeva.suzana" class="pl-4">
-                    <i
-                      class="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
+                  <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+                    <i class="bx bxs-envelope text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="live:suzanaristova" class="pl-4">
-                      <i class="bx bxl-skype text-2xl text-primary hover:text-yellow"></i>
+                  <a href="skype:live:suzanaristova?call" class="pl-4">
+                    <i class="bx bxl-skype text-2xl text-primary hover:text-yellow"></i>
                   </a>
                 </div>
               </div>
@@ -564,6 +587,44 @@
           </div>
         </div>
 
+        <div class="container py-16 md:py-20" id="portfolio">
+          <h2
+            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+          >
+            Check out my Portfolio
+          </h2>
+          <h3
+            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+          >
+            Here's what I have done with the past
+          </h3>
+
+          <div
+            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
+          >
+            <a
+              href="http://jobs.suzanajaneva.com/api/documentation"
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+            >
+              <img
+                src="/assets/img/job-project.png"
+                class="w-full shadow"
+                alt="portfolio image"
+              />
+            </a>
+            <a
+              href="http://conversion.suzanajaneva.com/api/documentation"
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+            >
+              <img
+                src="/assets/img/convert-project.png"
+                class="w-full shadow"
+                alt="portfolio image"
+              />
+            </a>
+          </div>
+        </div>
+
         <div class="bg-grey-50" id="community">
           <div class="container py-16 md:py-20">
             <div class="mx-auto w-full sm:w-3/4 lg:w-full">
@@ -584,13 +645,19 @@
                   </span>
                 </a>
 
-                <a href="https://medium.com/@suzanajaneva92">
+                <a href="https://github.com/suzana-janeva">
                   <span class="m-8 block">
-                    <i class="bx bxl-medium text-2xl text-primary hover:text-yellow"></i>
+                    <i class="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
                   </span>
                 </a>
 
-                <a href="live:suzanaristova">
+                <a href="https://gitlab.com/suzanaristova">
+                  <span class="m-8 block">
+                    <i class="bx bxl-gitlab text-2xl text-primary hover:text-yellow"></i>
+                  </span>
+                </a>
+
+                <a href="skype:suzanaristova?call">
                   <span class="m-8 block">
                     <i class="bx bxl-skype text-2xl text-primary hover:text-yellow"></i>
                   </span>
@@ -845,15 +912,15 @@
               <a href="https://github.com/suzana-janeva" class="pl-4">
                 <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="https://www.facebook.com/suzana.janeva92" class="pl-4">
+              <a href="https://gitlab.com/suzanaristova" class="pl-4">
                 <i
-                  class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
+                  class="bx bxl-gitlab text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="https://www.instagram.com/janeva.suzana/" class="pl-4">
-                <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+              <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+                <i class="bx bxs-envelope text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="live:suzanaristova" class="pl-4">
-                  <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
+              <a href="skype:live:suzanaristova?call" class="pl-4">
+                <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
               </a>
             </div>
           </div>
