@@ -16,7 +16,7 @@
 
   <meta property="og:url" content="https://suzanajaneva.com" />
 
-  <meta property="og:image" content="https://suzanajaneva.com/assets/img/social.png" />
+  <meta property="og:image" content="https://suzanajaneva.com/assets/img/social.jpg" />
 
   <meta name="description" content="Suzana Janeva" />
 
@@ -24,31 +24,39 @@
 
   <link rel="canonical" href="{{ url()->current() }}" />
 
-  <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" />
+  <link rel="icon" type="image/jpg" href="{{ asset('assets/img/favicon.jpg') }}" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
 
   <link rel="preload" href="/assets/img/bg-hero.webp" as="image" type="image/webp" />
 
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"/>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap">
+  </noscript>
 
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 
   <link rel="stylesheet" href="/assets/styles/main.min.css" media="screen" crossorigin="anonymous" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
 
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ env("GOOGLE_ANALYTICS") }}', { 'send_page_view': false });
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', '{{ env("GOOGLE_ANALYTICS") }}', {
+      'send_page_view': false
+    });
   </script>
 
 
-<script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
 
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
 
@@ -102,12 +110,12 @@
 
               <li class="group pl-6">
 
-              <span
-                @click="triggerNavItem('#portfolio')"
-                class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+                <span
+                  @click="triggerNavItem('#portfolio')"
+                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
 
-              <span
-                class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                <span
+                  class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
               </li>
 
               <li class="group pl-6">
@@ -195,7 +203,7 @@
                 @click="triggerMobileNavItem('#portfolio')"
                 class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
 
-              </li>
+            </li>
 
             <li class="py-2">
 
@@ -247,11 +255,10 @@
             class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div class="flex flex-col items-center justify-center lg:flex-row">
               <div class="rounded-full border-8 border-primary shadow-xl">
-                <img
-                  src="/assets/img/me.webp"
-                  class="h-48 rounded-full sm:h-56"
-                  alt="Portrait of Suzana Janeva" 
-                  loading="lazy"/>
+                <picture>
+                  <source srcset="/assets/img/me.webp" type="image/webp" alt="Portrait of Suzana Janeva" class="h-48 rounded-full sm:h-56" loading="lazy">
+                  <img src="/assets/img/me.jpg" alt="Portrait of Suzana Janeva" class="h-48 rounded-full sm:h-56" loading="lazy" decoding="async">
+                </picture>
               </div>
               <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1
@@ -269,21 +276,21 @@
                   </div>
                   <div
                     class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                    <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/" class="pl-4">
+                    <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/" aria-label="LinkedIn Profile" class="pl-4">
                       <i
                         class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="https://github.com/suzana-janeva" class="pl-4">
+                    <a href="https://github.com/suzana-janeva" class="pl-4" aria-label="Github Profile">
                       <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="https://gitlab.com/suzanaristova" class="pl-4">
+                    <a href="https://gitlab.com/suzanaristova" class="pl-4" aria-label="Gitlab Profile">
                       <i
                         class="bx bxl-gitlab text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+                    <a href="mailto:suzanajaneva92@gmail.com" class="pl-4" aria-label="Mail to">
                       <i class="bx bxs-envelope text-2xl text-white hover:text-yellow"></i>
                     </a>
-                    <a href="skype:live:suzanaristova?call" class="pl-4">
+                    <a href="skype:live:suzanaristova?call" class="pl-4" aria-label="Skype">
                       <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
                     </a>
                   </div>
@@ -323,21 +330,21 @@
                 </div>
                 <div
                   class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                  <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/">
+                  <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/" aria-label="LinkedIn Profile">
                     <i
                       class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="https://github.com/suzana-janeva" class="pl-4">
+                  <a href="https://github.com/suzana-janeva" class="pl-4" aria-label="GitHub Profile">
                     <i class="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="https://gitlab.com/suzanaristova" class="pl-4">
+                  <a href="https://gitlab.com/suzanaristova" class="pl-4" aria-label="Gitlab Profile">
                     <i
                       class="bx bxl-gitlab text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+                  <a href="mailto:suzanajaneva92@gmail.com" class="pl-4" aria-label="Mail to">
                     <i class="bx bxs-envelope text-2xl text-primary hover:text-yellow"></i>
                   </a>
-                  <a href="skype:live:suzanaristova?call" class="pl-4">
+                  <a href="skype:live:suzanaristova?call" class="pl-4" aria-label="Skype">
                     <i class="bx bxl-skype text-2xl text-primary hover:text-yellow"></i>
                   </a>
                 </div>
@@ -421,10 +428,10 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img src="/assets/img/icon-development-white.svg" alt="Development icon white" loading="lazy"/>
+                  <img src="/assets/img/icon-development-white.svg" alt="Development icon white" loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
-                  <img src="/assets/img/icon-development-black.svg" alt="Development icon black" loading="lazy"/>
+                  <img src="/assets/img/icon-development-black.svg" alt="Development icon black" loading="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -440,10 +447,10 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img src="/assets/img/icon-content-white.svg" alt="content marketing icon" loading="lazy"/>
+                  <img src="/assets/img/icon-content-white.svg" alt="content marketing icon" loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
-                  <img  src="/assets/img/icon-content-black.svg" alt="content marketing icon"  loading="lazy"/>
+                  <img src="/assets/img/icon-content-black.svg" alt="content marketing icon" loading="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -460,10 +467,16 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img src="/assets/img/docker.png" alt="Mobile Application icon" loading="lazy" />
+                <picture>
+                  <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
+                  <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
+                </picture>
                 </div>
                 <div class="block group-hover:hidden">
-                  <img src="/assets/img/docker.png" alt="Mobile Application icon" laoding="lazy" />
+                <picture>
+                  <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
+                  <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
+                </picture>
                 </div>
               </div>
               <div class="text-center">
@@ -482,8 +495,8 @@
                 <div class="hidden group-hover:block">
                   <img
                     src="/assets/img/icon-graphics-white.svg"
-                    alt="Email Marketing icon" 
-                    loading="lazy"/>
+                    alt="Email Marketing icon"
+                    loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
                   <img
@@ -508,14 +521,14 @@
                 <div class="hidden group-hover:block">
                   <img
                     src="/assets/img/database.png"
-                    alt="Theme Design icon" 
-                    loading="lazy"/>
+                    alt="Theme Design icon"
+                    loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
                   <img
                     src="/assets/img/database.png"
-                    alt="Theme Design icon" 
-                    loading="lazy"/>
+                    alt="Theme Design icon"
+                    loading="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -560,40 +573,31 @@
 
         <div class="container py-16 md:py-20" id="portfolio">
           <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-          >
+            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
             Check out my Portfolio
           </h2>
           <h3
-            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-          >
+            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
             Here's what I have done with the past
           </h3>
 
           <div
-            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
-          >
+            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
             <a
               href="http://jobs.suzanajaneva.com/api/documentation"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-            >
-              <img
-                src="/assets/img/job-project.png"
-                class="w-full shadow"
-                alt="portfolio image"
-                loading="lazy"
-              />
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
+              <picture>
+                <source srcset="/assets/img/job-project.webp" type="image/webp" alt="Portfolio image job" class="w-full shadow" loading="lazy">
+                <img src="/assets/img/job-project.jpg" alt="Portfolio imag job" class="w-full shadow" loading="lazy" decoding="async">
+              </picture>
             </a>
             <a
               href="http://conversion.suzanajaneva.com/api/documentation"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-            >
-              <img
-                src="/assets/img/convert-project.png"
-                class="w-full shadow"
-                alt="portfolio image"
-                loading="lazy"
-              />
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
+              <picture>
+                <source srcset="/assets/img/convert-project.webp" type="image/webp" alt="Portfolio image convert" class="w-full shadow" loading="lazy">
+                <img src="/assets/img/convert-project.jpg" alt="Portfolio image convert" class="w-full shadow" loading="lazy" decoding="async">
+              </picture>
             </a>
           </div>
         </div>
@@ -606,31 +610,31 @@
                 My Community
               </h2>
               <div class="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
-                <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/">
+                <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/" aria-label="LinkedIn Profile">
                   <span class="m-8 block">
                     <i class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
                   </span>
                 </a>
 
-                <a href="mailto:suzanajaneva92@gmail.com">
+                <a href="mailto:suzanajaneva92@gmail.com" aria-label="Mail to">
                   <span class="m-8 block">
                     <i class="bx bxs-envelope text-2xl text-primary hover:text-yellow"></i>
                   </span>
                 </a>
 
-                <a href="https://github.com/suzana-janeva">
+                <a href="https://github.com/suzana-janeva" aria-label="GitHub Profile">
                   <span class="m-8 block">
                     <i class="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
                   </span>
                 </a>
 
-                <a href="https://gitlab.com/suzanaristova">
+                <a href="https://gitlab.com/suzanaristova" aria-label="Gitlab Profile">
                   <span class="m-8 block">
                     <i class="bx bxl-gitlab text-2xl text-primary hover:text-yellow"></i>
                   </span>
                 </a>
 
-                <a href="skype:suzanaristova?call">
+                <a href="skype:suzanaristova?call" aria-label="Skype">
                   <span class="m-8 block">
                     <i class="bx bxl-skype text-2xl text-primary hover:text-yellow"></i>
                   </span>
@@ -881,20 +885,20 @@
               © Copyright 2025. All right reserved, Suzana Janeva.
             </p>
             <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-              <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/">
+              <a href="https://www.linkedin.com/in/suzana-janeva-76b48398/" aria-label="LinkedIn Profile">
                 <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="https://github.com/suzana-janeva" class="pl-4">
+              <a href="https://github.com/suzana-janeva" class="pl-4" aria-label="Github Profile">
                 <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="https://gitlab.com/suzanaristova" class="pl-4">
+              <a href="https://gitlab.com/suzanaristova" class="pl-4" aria-label="Gitlab Profile">
                 <i
                   class="bx bxl-gitlab text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="mailto:suzanajaneva92@gmail.com" class="pl-4">
+              <a href="mailto:suzanajaneva92@gmail.com" class="pl-4" aria-label="Mail to">
                 <i class="bx bxs-envelope text-2xl text-white hover:text-yellow"></i>
               </a>
-              <a href="skype:live:suzanaristova?call" class="pl-4">
+              <a href="skype:live:suzanaristova?call" class="pl-4" aria-label="Skype">
                 <i class="bx bxl-skype text-2xl text-white hover:text-yellow"></i>
               </a>
             </div>
