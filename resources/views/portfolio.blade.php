@@ -54,19 +54,18 @@
     media="screen"
     rel="stylesheet" />
 
-  <script
-    defer
-    src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
-
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{{ env("GOOGLE_ANALYTICS") }}');
+      gtag('config', '{{ env("GOOGLE_ANALYTICS") }}', { 'send_page_view': false });
   </script>
+
+
+<script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
 
@@ -186,7 +185,7 @@
           <button
             class="absolute top-0 right-0 mt-4 mr-4"
             @click="mobileMenu = false">
-            <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+            <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="Close image" loading="lazy" />
           </button>
 
           <ul class="mt-8 flex flex-col">
@@ -439,14 +438,10 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img
-                    src="/assets/img/icon-development-white.svg"
-                    alt="development icon" />
+                  <img src="/assets/img/icon-development-white.svg" alt="Development icon white" loading="lazy"/>
                 </div>
                 <div class="block group-hover:hidden">
-                  <img
-                    src="/assets/img/icon-development-black.svg"
-                    alt="development icon" />
+                  <img src="/assets/img/icon-development-black.svg" alt="Development icon black" loading="lazy"/>
                 </div>
               </div>
               <div class="text-center">
@@ -462,14 +457,10 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img
-                    src="/assets/img/icon-content-white.svg"
-                    alt="content marketing icon" />
+                  <img src="/assets/img/icon-content-white.svg" alt="content marketing icon" loading="lazy"/>
                 </div>
                 <div class="block group-hover:hidden">
-                  <img
-                    src="/assets/img/icon-content-black.svg"
-                    alt="content marketing icon" />
+                  <img  src="/assets/img/icon-content-black.svg" alt="content marketing icon"  loading="lazy"/>
                 </div>
               </div>
               <div class="text-center">
@@ -486,14 +477,10 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                  <img
-                    src="/assets/img/docker.png"
-                    alt="Mobile Application icon" />
+                  <img src="/assets/img/docker.png" alt="Mobile Application icon" loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
-                  <img
-                    src="/assets/img/docker.png"
-                    alt="Mobile Application icon" />
+                  <img src="/assets/img/docker.png" alt="Mobile Application icon" laoding="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -512,12 +499,14 @@
                 <div class="hidden group-hover:block">
                   <img
                     src="/assets/img/icon-graphics-white.svg"
-                    alt="Email Marketing icon" />
+                    alt="Email Marketing icon" 
+                    loading="lazy"/>
                 </div>
                 <div class="block group-hover:hidden">
                   <img
                     src="/assets/img/icon-graphics-black.svg"
-                    alt="Email Marketing icon" />
+                    alt="Email Marketing icon"
+                    loading="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -536,12 +525,14 @@
                 <div class="hidden group-hover:block">
                   <img
                     src="/assets/img/database.png"
-                    alt="Theme Design icon" />
+                    alt="Theme Design icon" 
+                    loading="lazy"/>
                 </div>
                 <div class="block group-hover:hidden">
                   <img
                     src="/assets/img/database.png"
-                    alt="Theme Design icon" />
+                    alt="Theme Design icon" 
+                    loading="lazy"/>
                 </div>
               </div>
               <div class="text-center">
@@ -560,12 +551,14 @@
                 <div class="hidden group-hover:block">
                   <img
                     src="/assets/img/icon-design-white.svg"
-                    alt="Graphic Design icon" />
+                    alt="Graphic Design icon"
+                    loading="lazy" />
                 </div>
                 <div class="block group-hover:hidden">
                   <img
                     src="/assets/img/icon-design-black.svg"
-                    alt="Graphic Design icon" />
+                    alt="Graphic Design icon"
+                    loading="lazy" />
                 </div>
               </div>
               <div class="text-center">
@@ -605,6 +598,7 @@
                 src="/assets/img/job-project.png"
                 class="w-full shadow"
                 alt="portfolio image"
+                loading="lazy"
               />
             </a>
             <a
@@ -615,6 +609,7 @@
                 src="/assets/img/convert-project.png"
                 class="w-full shadow"
                 alt="portfolio image"
+                loading="lazy"
               />
             </a>
           </div>
@@ -679,7 +674,8 @@
                     <img
                       src="/assets/img/mignix.jpeg"
                       class="h-auto w-32"
-                      alt="company logo" />
+                      alt="company logo"
+                      loading="lazy" />
                   </span>
                   <div class="relative ml-3 hidden w-full md:block">
                     <span
@@ -741,7 +737,8 @@
                     <img
                       src="/assets/img/codeart.jpeg"
                       class="h-auto w-32"
-                      alt="company logo" />
+                      alt="company logo"
+                      loading="lazy" />
                   </span>
                   <div class="relative ml-3 hidden w-full md:block">
                     <span
