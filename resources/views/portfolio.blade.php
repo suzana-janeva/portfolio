@@ -6,9 +6,7 @@
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 
-  <meta
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    name="viewport" />
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
 
   <meta name="theme-color" content="#5540af" />
 
@@ -28,33 +26,18 @@
 
   <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" />
 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+
   <link rel="preload" href="/assets/img/bg-hero.webp" as="image" type="image/webp" />
 
-  <link
-    crossorigin="crossorigin"
-    href="https://fonts.gstatic.com"
-    rel="preconnect" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"/>
 
-  <link
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-    rel="preload" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"/>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
-  <link
-    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-    rel="stylesheet" />
-
-  <link
-    crossorigin="anonymous"
-    href="/assets/styles/main.min.css"
-    media="screen"
-    rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles/main.min.css" media="screen" crossorigin="anonymous" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
+
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
