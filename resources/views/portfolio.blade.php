@@ -249,6 +249,8 @@
               <div class="rounded-full border-8 border-primary shadow-xl">
                 <img
                   src="/assets/img/me.webp"
+                  srcset="/assets/img/me-300x300.webp 300w, /assets/img/me-600x600.webp 600w, /assets/img/me-1000x1000.webp 1000w"
+                  sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1000px"
                   class="h-48 rounded-full sm:h-56"
                   alt="Portrait of Suzana Janeva" 
                   loading="lazy"/>
