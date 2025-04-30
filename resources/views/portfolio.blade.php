@@ -10,31 +10,25 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
     name="viewport" />
 
-  <title>Suzana Janeva</title>
+  <meta name="theme-color" content="#5540af" />
 
   <meta property="og:title" content="Homepage | Suzana Janeva" />
 
   <meta property="og:locale" content="en_US" />
 
-  <link
-    rel="canonical"
-    href="//" />
+  <meta property="og:url" content="https://suzanajaneva.com" />
 
-  <meta
-    property="og:url"
-    content="//" />
+  <meta property="og:image" content="https://suzanajaneva.com/assets/img/social.png" />
 
-  <meta
-    name="description"
-    content="Suzana Janeva" />
+  <meta name="description" content="Suzana Janeva" />
 
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <title>Suzana Janeva</title>
 
-  <meta name="theme-color" content="#5540af" />
+  <link rel="canonical" href="{{ url()->current() }}" />
 
-  <meta property="og:suzanajaneva.com" content="Suzana Janeva" />
+  <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}" />
 
-  <meta property="og:image" content="//assets/img/social.png" />
+  <link rel="preload" href="/assets/img/bg-hero.webp" as="image" type="image/webp" />
 
   <link
     crossorigin="crossorigin"
@@ -66,7 +60,7 @@
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_ANALYTICS') }}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -263,7 +257,7 @@
       <div>
         <div
           class="relative bg-cover bg-center bg-no-repeat py-8"
-          style="background-image: url(/assets/img/bg-hero.jpg)">
+          style="background-image: url(/assets/img/bg-hero.webp)">
           <div
             class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
 
@@ -272,9 +266,10 @@
             <div class="flex flex-col items-center justify-center lg:flex-row">
               <div class="rounded-full border-8 border-primary shadow-xl">
                 <img
-                  src="/assets/img/me.jpeg"
+                  src="/assets/img/me.webp"
                   class="h-48 rounded-full sm:h-56"
-                  alt="author" />
+                  alt="Portrait of Suzana Janeva" 
+                  loading="lazy"/>
               </div>
               <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1
