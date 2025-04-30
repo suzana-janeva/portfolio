@@ -311,7 +311,7 @@
                 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
                 I'm Suzana Janeva, a Web Developer
               </h4>
-              <p class="pt-6 font-body leading-relaxed text-grey-20">
+              <p class="pt-6 font-body leading-relaxed text-grey-800">
                 With 9 years of professional experience in web development, including more than 7 years
                 dedicated to working with Laravel, I have developed a deep technical skill set. My
                 experience in MySQL, REST API development, unit testing and Swagger documentation
@@ -321,7 +321,7 @@
               <div
                 class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
                 <div class="flex items-center justify-center sm:justify-start">
-                  <p class="font-body text-lg font-semibold uppercase text-grey-20">
+                  <p class="font-body text-lg font-semibold uppercase text-grey-800">
                     Connect with me
                   </p>
                   <div class="hidden sm:block">
@@ -602,7 +602,7 @@
           </div>
         </div>
 
-        <div class="bg-grey-50" id="community">
+        <div class="bg-grey-600" id="community">
           <div class="container py-16 md:py-20">
             <div class="mx-auto w-full sm:w-3/4 lg:w-full">
               <h2
@@ -652,7 +652,7 @@
 
           <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
             <span
-              class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
+              class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-400 md:block"></span>
 
             <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
               <div class="md:w-2/5">
@@ -673,12 +673,12 @@
               <div class="md:w-3/5">
                 <div class="relative flex md:pl-18">
                   <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"></span>
+                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-grey-400 bg-white md:block"></span>
 
                   <div class="mt-1 flex">
                     <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
                     <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40">July 2015 - October 2015</span>
+                      <span class="block font-body font-bold text-grey-400">July 2015 - October 2015</span>
                       <span
                         class="block pt-2 font-header text-xl font-bold uppercase text-primary"> Internship </span>
                       <div class="pt-2">
@@ -698,12 +698,12 @@
               <div class="md:w-3/5">
                 <div class="relative flex md:pl-18">
                   <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"></span>
+                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-grey-400 bg-white md:block"></span>
 
                   <div class="mt-1 flex">
                     <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
                     <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40">October 2015 - June 2017</span>
+                      <span class="block font-body font-bold text-grey-400">October 2015 - June 2017</span>
                       <span
                         class="block pt-2 font-header text-xl font-bold uppercase text-primary">Web Developer</span>
                       <div class="pt-2">
@@ -736,12 +736,12 @@
               <div class="md:w-3/5">
                 <div class="relative flex md:pl-18">
                   <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"></span>
+                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-grey-400 bg-white md:block"></span>
 
                   <div class="mt-1 flex">
                     <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
                     <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40">July 2017 - present</span>
+                      <span class="block font-body font-bold text-grey-400">July 2017 - present</span>
                       <span
                         class="block pt-2 font-header text-xl font-bold uppercase text-primary">Web Developer</span>
                       <div class="pt-2">
@@ -810,27 +810,27 @@
             @csrf
             <div class="flex flex-col md:flex-row">
               <input
-                class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
+                class="mr-3 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
                 placeholder="Name"
                 type="text"
                 name="name"
                 id="name" />
               <input
-                class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
+                class="mt-6 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
                 placeholder="Email"
                 type="email"
                 name="email"
                 id="email" />
             </div>
             <textarea
-              class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
+              class="mt-6 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:mt-8"
               placeholder="Message"
               name="message"
               id="message"
               cols="30"
               rows="10"></textarea>
             <button
-              class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
+              class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-800"
               type="submit">
               Send
               <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
@@ -841,8 +841,8 @@
             <div
               class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3">
               <div class="flex items-center">
-                <i class="bx bx-phone text-2xl text-grey-40"></i>
-                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                <i class="bx bx-phone text-2xl text-grey-400"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-400 lg:text-lg">
                   My Phone
                 </p>
               </div>
@@ -853,8 +853,8 @@
             <div
               class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
               <div class="flex items-center">
-                <i class="bx bx-envelope text-2xl text-grey-40"></i>
-                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                <i class="bx bx-envelope text-2xl text-grey-400"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-400 lg:text-lg">
                   My Email
                 </p>
               </div>
@@ -865,8 +865,8 @@
             <div
               class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
               <div class="flex items-center">
-                <i class="bx bx-map text-2xl text-grey-40"></i>
-                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                <i class="bx bx-map text-2xl text-grey-400"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-400 lg:text-lg">
                   My Address
                 </p>
               </div>
