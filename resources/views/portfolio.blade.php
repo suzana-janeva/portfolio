@@ -39,18 +39,35 @@
 
   <link rel="stylesheet" href="/assets/styles/main.min.css" media="screen" crossorigin="anonymous" />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
-
   <script>
-    window.dataLayer = window.dataLayer || [];
+    let gaLoaded = false;
 
-    function gtag() {
-      dataLayer.push(arguments);
+    function loadGA() {
+      if (gaLoaded) return;
+      gaLoaded = true;
+
+      let script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}";
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '{{ env("GOOGLE_ANALYTICS") }}', {
+          'send_page_view': false
+        });
+      };
     }
-    gtag('js', new Date());
-    gtag('config', '{{ env("GOOGLE_ANALYTICS") }}', {
-      'send_page_view': false
+
+    window.addEventListener('scroll', loadGA, {
+      once: true
     });
+    window.addEventListener
   </script>
 
 
@@ -467,16 +484,16 @@
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div class="hidden group-hover:block">
-                <picture>
-                  <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
-                  <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
-                </picture>
+                  <picture>
+                    <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
+                    <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
+                  </picture>
                 </div>
                 <div class="block group-hover:hidden">
-                <picture>
-                  <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
-                  <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
-                </picture>
+                  <picture>
+                    <source srcset="/assets/img/docker.webp" type="image/webp" alt="Mobile Application icon" loading="lazy">
+                    <img src="/assets/img/docker.jpg" alt="Mobile Application icon" loading="lazy" decoding="async">
+                  </picture>
                 </div>
               </div>
               <div class="text-center">
@@ -810,20 +827,20 @@
             @csrf
             <div class="flex flex-col md:flex-row">
               <input
-                class="mr-3 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
+                class="mr-3 w-full rounded border-grey-00 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
                 placeholder="Name"
                 type="text"
                 name="name"
                 id="name" />
               <input
-                class="mt-6 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
+                class="mt-6 w-full rounded border-grey-00 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
                 placeholder="Email"
                 type="email"
                 name="email"
                 id="email" />
             </div>
             <textarea
-              class="mt-6 w-full rounded border-grey-100 px-4 py-3 font-body text-black md:mt-8"
+              class="mt-6 w-full rounded border-grey-00 px-4 py-3 font-body text-black md:mt-8"
               placeholder="Message"
               name="message"
               id="message"
