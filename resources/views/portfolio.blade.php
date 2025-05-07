@@ -617,6 +617,17 @@
               </picture>
             </a>
           </div>
+          <div
+            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
+            <a
+              href="https://laravel-module.suzanajaneva.com/service-providers"
+              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
+              <picture>
+                <source srcset="/assets/img/module.webp" type="image/webp" alt="Module image job" class="w-full shadow" loading="lazy">
+                <img src="/assets/img/module.jpg" alt="Module imag job" class="w-full shadow" loading="lazy" decoding="async">
+              </picture>
+            </a>
+          </div>
         </div>
 
         <div class="bg-grey-600" id="community">
